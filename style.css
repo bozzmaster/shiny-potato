@@ -1,0 +1,78 @@
+:root {
+    --primary-text: #EBE6D9;
+    --secondary-text: #9bac9f;
+    --accent: #D4AF37;
+    --primary-bg: #0B0F0D;
+    --secondary-bg: #2A3A33;
+    --border-color: #3F5E4E;
+    --standard-gap: 40px;
+    --page-margin: 3rem;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: var(--primary-bg);
+    color: var(--secondary-text);
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: normal;
+    border-bottom: 1px solid var(--secondary-bg);
+    color: var(--primary-text);
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 var(--page-margin);
+}
+
+#hero{
+    color: var(--primary-text);
+    font-size: 4em;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+main {
+    margin: 0 var(--page-margin);
+}
+
+nav {
+    background: var(--secondary-bg);
+    border-radius: 30px;
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: var(--primary-text);
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 1rem 2rem;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: color-mix(in oklab, var(--secondary), black 10%);
+}
+
+#project-showcase dl dt a {
+    color: var(--accent);
+}
