@@ -47,6 +47,12 @@ main {
     padding: 20px;
 }
 
+main p {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #about .parent{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
