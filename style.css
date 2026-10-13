@@ -42,16 +42,36 @@ header {
 }
 
 main {
-    margin: 0 var(--page-margin);
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+}
+
+#about .parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+}
+
+#about .about_text {
+    grid-column: span 2 / span 2;
+}
+
+#about .headshot {
+    grid-column-start: 3;
 }
 
 nav {
     background: var(--secondary-bg);
     border-radius: 30px;
     margin-top: 1rem;
+    text-align: center;
 }
 
 nav ul {
+    display: inline-block;
+    text-align: left;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -75,4 +95,12 @@ nav ul li a:hover {
 
 #project-showcase dl dt a {
     color: var(--accent);
+}
+
+#contact p a {
+    color: var(--accent);
+}
+
+footer {
+    margin: 20px;
 }
