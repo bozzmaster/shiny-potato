@@ -27,10 +27,11 @@ p {
     line-height: 1.4;
 }
 
-header {
+h1 {
     text-align: center;
     padding: 1rem 0;
     margin: 0 var(--page-margin);
+    color: var(--primary-text);
 }
 
 #hero{
