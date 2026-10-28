@@ -54,58 +54,122 @@ main p {
     border-radius: 10px;
 }
 
-#about .parent{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 8px;
+
+@media (width >= 740px) {
+    #about .parent{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 8px;
+    }
+
+    #about .about_text {
+        grid-column: span 2 / span 2;
+    }
+
+    #about .headshot {
+        grid-column-start: 3;
+        place-items: center;
+    }
+
+    #about img {
+        display: block;
+        margin: auto;
+        margin-top: 6%;
+        border-radius: 8px;
+    }
 }
 
-#about .about_text {
-    grid-column: span 2 / span 2;
+@media (width < 740px){
+    #about img {
+        display: block;
+        margin: auto;
+        margin-top: 6%;
+        border-radius: 8px;
+    }
 }
 
-#about .headshot {
-    grid-column-start: 3;
-    place-items: center;
-}
-
-#about img {
-    display: block;
-    margin: auto;
-    margin-top: 6%;
-    border-radius: 8px;
-}
 
 nav {
     background: var(--secondary-bg);
     border-radius: 30px;
     margin-top: 1rem;
+    margin-left: 70px;
+    margin-right: 70px;
     text-align: center;
 }
 
-nav ul {
-    display: inline-block;
-    text-align: left;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+@media (width >=740){
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        margin: 50px;
+        padding: 0px;
+    }
 }
 
+@media (width < 740){
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        margin: 50px;
+        padding: 0px;
+    }
+}
+
+
 nav ul li {
-    display: inline-block;
+    display: inline-flex;
+    padding-left: 0px;
 }
 
 nav ul li a {
     color: var(--primary-text);
     text-decoration: none;
     font-size: 1.8em;
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: inline-block;
 }
 
 nav ul li a:hover {
-    background: color-mix(in oklab, var(--secondary), black 10%);
+    color: color-mix(in oklab, var(--secondary), black 30%);
+}
+
+#project-showcase dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.project1 {
+    grid-column: span 2 / span 2;
+}
+
+.project2 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.project3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+}
+
+.project4 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 4;
+}
+
+.project5 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 5;
 }
 
 #project-showcase dl dt a {
